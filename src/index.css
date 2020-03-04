@@ -1,13 +1,42 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+	background: linear-gradient(-90deg, rgba(131,58,180,1) 41%, rgba(253,29,191,0.5130251929873512) 85%, rgba(252,69,214,1) 100%);
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+input {
+	width: 400px;
+	text-align: center;
 }
+
+
+/*@font-face {
+	font-family: 'Starcruiser Expanded Semi-Italic Expanded Semi-Italic';
+	font-style: normal;
+	font-weight: normal;
+	src: local('Starcruiser Expanded Semi-Italic Expanded Semi-Italic'), url('./fonts/starcruiserexpandedsemitalic.woff') format('woff');
+}*/
+
+@font-face {
+	font-family: 'LifeCraftRegular';
+	font-style: normal;
+	font-weight: 900;
+	src: local('LifeCraftRegular'), url('./fonts/LifeCraft_Font.woff') format('woff');
+}
+
+h1.cooltitle {
+	color: white;
+	font-family: 'LifeCraftRegular', monospace;
+	font-size: 2.5rem;
+	letter-spacing: 0.25rem;
+}
+
+div > h2 {
+	color: white;
+	font-family: 'LifeCraftRegular', monospace;
+	font-size: 1.6rem;
+	letter-spacing: 0.25rem;
+}
+
+
