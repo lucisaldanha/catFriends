@@ -38,7 +38,7 @@ class App extends Component {
 		} else {
 			return (
 				<div className='tc'>
-					<h1 className='cooltitle'>CuteCatFriends</h1>
+					<h1 className='cooltitle'>Cute Cat Friends</h1>
 					<SearchBox searchChange = {this.onSearchChange} />
 					<Scroll>			
 						<CardList robots = {filteredRobots} />
