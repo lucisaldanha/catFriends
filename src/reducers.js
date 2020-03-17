@@ -1,11 +1,11 @@
 import { CHANGE_SEARCH_FIELD } from './constants.js';
 
-// Created first an initial state/object.
+// Create an initial state/object.
 const initialState = {
     searchField: ''
 };
 
-// After initial state added, a reducer (function) is defined.
+// After initial state added, a reducer (pure function) is defined.
 export const searchCats = (state= initialState, action={}) => {
     switch(action.type) {
         case CHANGE_SEARCH_FIELD:
