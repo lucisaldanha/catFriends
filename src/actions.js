@@ -7,10 +7,8 @@ import { CHANGE_SEARCH_FIELD } from './constants.js';
 // First create setSearchField Action which receives 'text' as input
 // (user input), returning an object with type(action type) and payload
 // (keys).
-export const setSearchField = (text) => {
+export const setSearchField = (text) => ({
     // console.log(text);
-    return {
-        type: CHANGE_SEARCH_FIELD, // user input typing on search box     
-        payload: text     // type of data
-    }
-}; 
+    type: CHANGE_SEARCH_FIELD, // user input typing on search box     
+    payload: text     // type of data
+}); 
