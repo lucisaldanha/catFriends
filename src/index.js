@@ -3,14 +3,14 @@ import ReactDOM from 'react-dom';
 // Adding React Redux
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux'; //importing functions 
-import logger from 'redux-logger'; //importing Logger with default options from redux-logger package
 import { searchCats } from './reducers.js';
+import logger from 'redux-logger'; //importing Logger function(middleware) with default options from redux-logger package
 
 import App from './containers/App';
 // CSS Toolkit
 import 'tachyons';
 
-// adding logger for development and testing
+// appliying middleware logger for development and testing
 const store = createStore(searchCats,applyMiddleware(logger)); // we remove state from react app and keep it inside of this store.
 // we pass state down with store as a prop to App component.
 
