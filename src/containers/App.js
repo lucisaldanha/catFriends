@@ -1,20 +1,37 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux'; // importing connect method from react-redux
 import CardList from '../components/CardList';
 import SearchBox from '../components/SearchBox';
-// import { robots } from './lib/robots';
+// import { cats } from './lib/cats';
 import '../index.css';
 import Scroll from '../components/Scroll';
 import ErrorBoundary from '../components/ErrorBoundary';
 
+import { setSearchField } from '../actions.js'; //importing the redux actions we have, because App.js is a smart component
+
+// mapStateToProps tells what state I need to listen to and send down as props
+// searchField is a prop in App component
+// We access reducer from store that was created and passed down from index.js
+const mapStateToProps = state => {
+	return {
+		searchField: state.searchField // state.searchCats.searchField gave error
+	}
+};
+
+// mapDispatchtoProps assign the props that we listen to that are Actions
+// and that should be dispatched
+const mapDispatchToProps = (dispatch) => {
+	return {
+		onSearchChange: (event) => dispatch(setSearchField(event.target.value))
+	}
+};
 
 class App extends Component {
 	constructor (props) {
 		super(props)
 		this.state = {
-			robots: [],	
-			searchfield: '' 
+			robots: []
 		}
-		this.onSearchChange = this.onSearchChange.bind(this)
 		// console.log('constructor');
 	}	
 	componentDidMount() {
@@ -26,13 +43,10 @@ class App extends Component {
 			.then(users => this.setState({ robots: users}));
 		// console.log('componentDidMount');
 	}
-	onSearchChange = (event) =>{
-		this.setState({ searchfield: event.target.value })
-	}
 
 	render () {
 		const filteredRobots = this.state.robots.filter(robot => {
-			return robot.name.toLowerCase().includes(this.state.searchfield.toLowerCase());
+			return robot.name.toLowerCase().includes(this.props.searchField.toLowerCase());
 		});
 		// console.log('render');
 		if (this.state.robots.length === 0) {
@@ -41,7 +55,7 @@ class App extends Component {
 			return (
 				<div className='tc'>
 					<h1 className='cooltitle'>Cute Cat Friends</h1>
-					<SearchBox searchChange = {this.onSearchChange} />
+					<SearchBox searchChange = {this.props.onSearchChange} />
 					<Scroll>		
 							{/* wrapped CardList with Error Boundary component to catch errors  */}
 						<ErrorBoundary>
@@ -54,4 +68,4 @@ class App extends Component {
 	}
 }
 
-export default App;
+export default connect(mapStateToProps, mapDispatchToProps)(App);
