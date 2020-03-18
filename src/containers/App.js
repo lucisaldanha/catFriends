@@ -8,8 +8,8 @@ import ErrorBoundary from '../components/ErrorBoundary';
 
 
 class App extends Component {
-	constructor () {
-		super()
+	constructor (props) {
+		super(props)
 		this.state = {
 			robots: [],	
 			searchfield: '' 
@@ -18,6 +18,7 @@ class App extends Component {
 		// console.log('constructor');
 	}	
 	componentDidMount() {
+		// console.log(this.props.store.getState()); // testing the store passed down from index.js
 		fetch('https://jsonplaceholder.typicode.com/users')
 			.then(response => {
 				return response.json();
