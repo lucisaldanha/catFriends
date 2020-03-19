@@ -21,8 +21,9 @@ const mapStateToProps = state => {
 // mapDispatchtoProps assign the props that we listen to that are Actions
 // and that should be dispatched
 const mapDispatchToProps = (dispatch) => {
+	// we listen to the props action setSearchField, then we dispatch this action to reducer to change state
 	return {
-		onSearchChange: (event) => dispatch(setSearchField(event.target.value))
+		onSearchChange: (event) => dispatch(setSearchField(event.target.value)) 
 	}
 };
 
