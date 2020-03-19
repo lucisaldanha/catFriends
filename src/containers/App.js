@@ -34,6 +34,9 @@ class App extends Component {
 		}
 		// console.log('constructor');
 	}	
+
+	// We make an asynchronous request to an API, grabbing its users and
+	// setting that state to robots(Cats);
 	componentDidMount() {
 		// console.log(this.props.store.getState()); // testing the store passed down from index.js
 		fetch('https://jsonplaceholder.typicode.com/users')
