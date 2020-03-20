@@ -21,6 +21,10 @@ You will also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.<br>
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
+### `npm run deploy`
+
+Run this command when modifications are ready to be deployed. The script will create the build folder and then will publish your web page on gh-pages, where it's hosted.
+
 ### `npm run build`
 
 Builds the app for production to the `build` folder.<br>
@@ -30,6 +34,7 @@ The build is minified and the filenames include the hashes.<br>
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
 
 ### `npm run eject`
 
