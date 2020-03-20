@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Notes 
 
-Change variables and names for Cats, instead of Robots.
+Check issues to next steps.
 
 ## Available Scripts
 
