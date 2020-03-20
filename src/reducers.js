@@ -1,9 +1,8 @@
+// REDUCERS: searchCatsReducer and requestCatsReducer;
+
 import { 
-    CHANGE_SEARCH_FIELD,
-    REQUEST_CAT_PENDING,
-    REQUEST_CAT_SUCCESS,
-    REQUEST_CAT_FAILED
-} from './constants.js';
+    CHANGE_SEARCH_FIELD, REQUEST_CAT_PENDING,
+    REQUEST_CAT_SUCCESS, REQUEST_CAT_FAILED} from './constants.js';
 
 // Create an initial state/object.
 const initialStateSearch = {
@@ -11,7 +10,7 @@ const initialStateSearch = {
 };
 
 // After initial state added, a reducer (pure function) is defined.
-export const searchCats = (state= initialStateSearch, action={}) => {
+export const searchCatsReducer = (state= initialStateSearch, action={}) => {
     // console.log(action.type);
     switch(action.type) {
         case CHANGE_SEARCH_FIELD:
@@ -21,6 +20,7 @@ export const searchCats = (state= initialStateSearch, action={}) => {
     }
 };
 
+// Adding state and reducer function for requesting the Cats users;
 const initialStateCats = {
     isPending: false,
     cats: [],
