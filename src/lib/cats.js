@@ -1,5 +1,5 @@
-// List was created for testing purposes. Now, we use an Api to fetch our our "robots friends".
-export const robots = [
+// List was created for testing purposes. Now, we use an Api to fetch our "cat friends".
+export const cats = [
   {
     id: 1,
     name: 'Sansa Stark',
