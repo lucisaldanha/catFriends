@@ -7,53 +7,47 @@ import '../index.css';
 import Scroll from '../components/Scroll';
 import ErrorBoundary from '../components/ErrorBoundary';
 
-import { setSearchField } from '../actions.js'; //importing the redux actions we have, because App.js is a smart component
+import { setSearchField, requestCats } from '../actions.js'; //importing the redux actions we have, because App.js is a smart component
 
-// mapStateToProps tells what state I need to listen to and send down as props
-// searchField is a prop in App component
-// We access reducer from store that was created and passed down from index.js
+// mapStateToProps tells which state to listen to(from reducers.js) and send down as props;
+// searchField/cats/isPending/error are props in App component;
+// We access reducer from store that was created and passed down from index.js;
 const mapStateToProps = state => {
 	return {
-		searchField: state.searchField // state.searchCats.searchField gave error
+		searchField: state.searchCatsReducer.searchField,
+		cats: state.requestCatsReducer.cats,
+		isPending: state.requestCatsReducer.isPending,
+		error: state.requestCatsReducer.error
 	}
 };
 
-// mapDispatchtoProps assign the props that we listen to that are Actions
-// and that should be dispatched
+// mapDispatchtoProps assign the props Actions(from actions.js) to listen to
+// and that should be dispatched;
 const mapDispatchToProps = (dispatch) => {
-	// we listen to the props action setSearchField, then we dispatch this action to reducer to change state
+	// we listen to the props action setSearchField/requestCats, 
+	// then we dispatch action to reducer to change state
 	return {
-		onSearchChange: (event) => dispatch(setSearchField(event.target.value)) 
+		onSearchChange: (event) => dispatch(setSearchField(event.target.value)), //listen to setSearchField action
+		onRequestCats: () => dispatch(requestCats())  //listen to requestCats action
 	}
 };
 
 class App extends Component {
-	constructor (props) {
-		super(props)
-		this.state = {
-			robots: []
-		}
-		// console.log('constructor');
-	}	
-
+	// state is passed down form store as this.props;
 	// We make an asynchronous request to an API, grabbing its users and
 	// setting that state to robots(Cats);
 	componentDidMount() {
-		// console.log(this.props.store.getState()); // testing the store passed down from index.js
-		fetch('https://jsonplaceholder.typicode.com/users')
-			.then(response => {
-				return response.json();
-			})
-			.then(users => this.setState({ robots: users}));
+		this.props.onRequestCats(); // connecting this action;
 		// console.log('componentDidMount');
 	}
 
-	render () {
-		const filteredRobots = this.state.robots.filter(robot => {
-			return robot.name.toLowerCase().includes(this.props.searchField.toLowerCase());
+	render() {
+		const filteredCats = this.props.cats.filter(cat => {
+			return cat.name.toLowerCase().includes(this.props.searchField.toLowerCase());
 		});
+
 		// console.log('render');
-		if (this.state.robots.length === 0) {
+		if (this.props.isPending) {
 			return <h1 className='cooltitle'>Loading...</h1>
 		} else {
 			return (
@@ -63,7 +57,7 @@ class App extends Component {
 					<Scroll>		
 							{/* wrapped CardList with Error Boundary component to catch errors  */}
 						<ErrorBoundary>
-							<CardList robots = {filteredRobots} />
+							<CardList cats = {filteredCats} />
 						</ErrorBoundary>
 					</Scroll>
 				</div> 
