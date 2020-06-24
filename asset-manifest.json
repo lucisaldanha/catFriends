@@ -1,26 +1,26 @@
 {
   "files": {
-    "main.css": "/robofriends/static/css/main.96982cbc.chunk.css",
-    "main.js": "/robofriends/static/js/main.530e144c.chunk.js",
-    "main.js.map": "/robofriends/static/js/main.530e144c.chunk.js.map",
-    "runtime-main.js": "/robofriends/static/js/runtime-main.5530ba65.js",
-    "runtime-main.js.map": "/robofriends/static/js/runtime-main.5530ba65.js.map",
-    "static/css/2.3b6f1bda.chunk.css": "/robofriends/static/css/2.3b6f1bda.chunk.css",
-    "static/js/2.2ca109c7.chunk.js": "/robofriends/static/js/2.2ca109c7.chunk.js",
-    "static/js/2.2ca109c7.chunk.js.map": "/robofriends/static/js/2.2ca109c7.chunk.js.map",
-    "index.html": "/robofriends/index.html",
-    "precache-manifest.ad36b12c52aea912b26532d7e28de6b5.js": "/robofriends/precache-manifest.ad36b12c52aea912b26532d7e28de6b5.js",
-    "service-worker.js": "/robofriends/service-worker.js",
-    "static/css/2.3b6f1bda.chunk.css.map": "/robofriends/static/css/2.3b6f1bda.chunk.css.map",
-    "static/css/main.96982cbc.chunk.css.map": "/robofriends/static/css/main.96982cbc.chunk.css.map",
-    "static/js/2.2ca109c7.chunk.js.LICENSE.txt": "/robofriends/static/js/2.2ca109c7.chunk.js.LICENSE.txt",
-    "static/media/index.css": "/robofriends/static/media/LifeCraft_Font.12bc61e3.woff"
+    "main.css": "/catFriends/static/css/main.8a61c03b.chunk.css",
+    "main.js": "/catFriends/static/js/main.c89069d1.chunk.js",
+    "main.js.map": "/catFriends/static/js/main.c89069d1.chunk.js.map",
+    "runtime-main.js": "/catFriends/static/js/runtime-main.dc3d5aec.js",
+    "runtime-main.js.map": "/catFriends/static/js/runtime-main.dc3d5aec.js.map",
+    "static/css/2.3b6f1bda.chunk.css": "/catFriends/static/css/2.3b6f1bda.chunk.css",
+    "static/js/2.59e2219b.chunk.js": "/catFriends/static/js/2.59e2219b.chunk.js",
+    "static/js/2.59e2219b.chunk.js.map": "/catFriends/static/js/2.59e2219b.chunk.js.map",
+    "index.html": "/catFriends/index.html",
+    "precache-manifest.82ecc2c0b9139869802dec296c496e27.js": "/catFriends/precache-manifest.82ecc2c0b9139869802dec296c496e27.js",
+    "service-worker.js": "/catFriends/service-worker.js",
+    "static/css/2.3b6f1bda.chunk.css.map": "/catFriends/static/css/2.3b6f1bda.chunk.css.map",
+    "static/css/main.8a61c03b.chunk.css.map": "/catFriends/static/css/main.8a61c03b.chunk.css.map",
+    "static/js/2.59e2219b.chunk.js.LICENSE.txt": "/catFriends/static/js/2.59e2219b.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/catFriends/static/media/LifeCraft_Font.12bc61e3.woff"
   },
   "entrypoints": [
-    "static/js/runtime-main.5530ba65.js",
+    "static/js/runtime-main.dc3d5aec.js",
     "static/css/2.3b6f1bda.chunk.css",
-    "static/js/2.2ca109c7.chunk.js",
-    "static/css/main.96982cbc.chunk.css",
-    "static/js/main.530e144c.chunk.js"
+    "static/js/2.59e2219b.chunk.js",
+    "static/css/main.8a61c03b.chunk.css",
+    "static/js/main.c89069d1.chunk.js"
   ]
 }
