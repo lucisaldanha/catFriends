@@ -1,8 +1,8 @@
 {
-  "name": "robofriends",
+  "name": "catFriends",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://lusalga.github.io/robofriends/",
+  "homepage": "https://lusalga.github.io/catFriends/",
   "dependencies": {
     "gh-pages": "^2.2.0",
     "react": "^16.13.0",
